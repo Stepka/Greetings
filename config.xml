@@ -78,6 +78,4 @@
   </platform>
   <platform name="winphone">
   </platform>
-  <platform name="wp8">
-  </platform>
 </widget>
