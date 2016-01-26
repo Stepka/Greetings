@@ -22,7 +22,15 @@ var app = {
 
         console.log('initialize');
         this.bindEvents();
+
+        var self = this;
+        this.store = new MemoryStore(function() {
+            self.renderHomeView();
+        });
     },
+
+
+
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -31,6 +39,9 @@ var app = {
         console.log('bindEvents');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+
+
+
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
@@ -39,6 +50,9 @@ var app = {
         console.log('onDeviceReady');
         app.receivedEvent('deviceready');
     },
+
+
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -49,5 +63,34 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+
+
+
+    renderHomeView: function() {
+        console.log('renderHomeView');
+        var html =
+            "<div class='header'><h1>Home</h1></div>" +
+            "<div class='search-view'>" +
+            "<input class='search-key'/>" +
+            "<ul class='employee-list'></ul>" +
+            "</div>";
+        $('.homeScreen').append(html);
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+    },
+
+
+
+    findByName: function() {
+        console.log('findByName');
+        this.store.findByName($('.search-key').val(), function(employees) {
+            var l = employees.length;
+            var e;
+            $('.employee-list').empty();
+            for (var i=0; i<l; i++) {
+                e = employees[i];
+                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
+            }
+        });
+    },
 };
