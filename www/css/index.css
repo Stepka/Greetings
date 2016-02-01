@@ -40,7 +40,6 @@ body {
 
     overflow: hidden;
     position: absolute;
-    max-width: 600px;
 }
 
 /* Portrait layout (default) */
@@ -54,8 +53,7 @@ body {
 
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+@media screen and (min-aspect-ratio: 1/1) and (min-width:600px) {
     .app {
         background-position:left center;
         padding: 50px 0px 0px 0px;  /* padding-top + padding-bottom + text area = image height */
@@ -325,8 +323,8 @@ li>a.tappable-active {
 
     top: 0px;
 
-    width: 30%;
-    height: 15%;
+    width: 150px;
+    height: 150px;
 
     position: absolute;
     z-index: 5;
@@ -383,19 +381,20 @@ li>a.tappable-active {
 
 .changeBack
 {
-    position:relative;
-
     transform:rotate(-45deg);
     -webkit-transform:rotate(-45deg);
     -moz-transform:rotate(-45deg);
     -o-transform:rotate(-45deg);
 
-    left: -5px;
-    top: 20px;
+    left: -15px;
+    top: 25px;
 
     font-size: 1.5em;
     color: #835e53;
 
-    width: 70%;
+    width: 100%;
+
+    position: absolute;
+    z-index: 5;
 
 }

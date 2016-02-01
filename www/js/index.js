@@ -28,10 +28,6 @@ var app = {
             self.route();
         });
 
-        this.detailsURL = /^#employees\/(\d{1,})/;
-
-        jQuery.mobile.orientationChangeEnabled = false;
-
     },
 
 
