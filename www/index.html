@@ -30,19 +30,56 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Greetings</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <script id="home-tpl" type="text/x-handlebars-template">
+            <div class="corner">
+                <div class="changeBack">
+                    Сменить фон
+                </div>
             </div>
-            <div id="homeScreen" class="homeScreen">
+            <table width="100%" height="100%" style="margin: 0px auto; padding-bottom: 20px; padding-top: 20px;">
+                <tr width="100%" height="100%">
+                    <td width="100%" height="100%" align="middle">
+                        <div class="headerContainer">
+                            <div class="textBevel">
+                                Сменить заголовок
+                            </div>
+                        </div>
+                        <div class="undercover">
+                            <div class="photoBevel">
+                                фото
+                            </div>
+                            <div class="textBevelIn">
+                                текст поздравления
+                            </div>
+                            <div class="playButton" >
+                                <img src="img/PlayButton.png" width="30%" height="30%">
+                            </div>
+                        </div>
+                        <div class="readyContainer" align="right">
+                            <div class="readyButton" align="center">
+                                готово
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </script>
+
+
+        <div class="app">
+            <div id="screensNavigator" class="screensNavigator">
             </div>
         </div>
         <script type="text/javascript" src="lib/jquery-2.2.0.js"></script>
-        <script type="text/javascript" src="js/storage/memory-store.js"></script>
+        <script type="text/javascript" src="lib/handlebars.js"></script>
+        <script type="text/javascript" src="lib/iscroll.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/storage/memory-store.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/screens/HomeScreen.js"></script>
+        <script type="text/javascript" src="js/screens/DetailsScreen.js"></script>
+        <script type="text/javascript" src="js/models/GreetingCardModel.js"></script>
+        <script type="text/javascript" src="js/enums/BacksEnum.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
