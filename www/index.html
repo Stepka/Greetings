@@ -33,7 +33,7 @@
     <body>
         <script id="home-tpl" type="text/x-handlebars-template">
             <div class="corner">
-                <div class="changeBack">
+                <div id="changeBack" class="changeBack">
                     Сменить<br>фон
                 </div>
             </div>
@@ -41,23 +41,30 @@
                 <tr width="100%" height="100%">
                     <td width="100%" height="100%" align="center">
                         <div class="headerContainer">
-                            <div class="textBevel">
-                                Сменить заголовок
+                            <div id="headerText" class="textBevel">
+                                <p id="changeHeaderLabel" style="display: block">Сменить заголовок</p>
+                                <textarea id="changeHeaderInput" class="input" style="display: none" >Сменить заголовок</textarea>
                             </div>
                         </div>
-                        <div class="undercover" align="center">
-                            <div class="photoBevel">
-                                фото
+                        <div id="undercover" class="undercover" align="center">
+                            <div id="photoBevel" class="photoBevel">
+                                <p id="getPhotoLabel" style="display: block">фото</p>
+                                <input id="openUploadDialog" type="file" name="openUploadDialog" accept=".png,.jpg,.jpeg" style="display: none;" />
                             </div>
-                            <div class="textBevelIn">
-                                текст поздравления
+                            <img id="photoMain" class="photoMain" src="" style="display: none">
+
+                            <canvas id="photoCanvas" class="photoCanvas" style="display: none;"></canvas>
+
+                            <div id="greetingText" class="textBevelIn">
+                                <p id="changeGreetingTextLabel" style="display: block">текст поздравления</p>
+                                <textarea id="changeGreetingTextInput" class="input" style="display: none" >текст поздравления</textarea>
                             </div>
-                            <div class="playButton" >
+                            <div id="playButton" class="playButton" >
                                 <img src="img/PlayButton.png" width="30%" height="30%">
                             </div>
                         </div>
                         <div class="readyContainer" align="right">
-                            <div class="readyButton" align="center">
+                            <div id="readyButton" class="readyButton" align="center">
                                 готово
                             </div>
                         </div>
@@ -67,7 +74,7 @@
         </script>
 
 
-        <div class="app">
+        <div id="app" class="app">
             <div id="screensNavigator" class="screensNavigator">
             </div>
         </div>

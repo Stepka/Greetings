@@ -62,80 +62,9 @@ body {
     }
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
+p {
     margin:0px;
-    overflow:visible;
     padding:0px;
-    text-align:center;
-}
-
-ul {
-    text-align:start;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fafafa;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-li {
-    display: block;
-    border-top: 1px solid #c0c0c0;
-    padding: 10px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-li {
-    display: block;
-    border-top: 1px solid #e0e0e0;
-    padding: 10px;
-}
-
-li {
-    padding: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    width: 100%;
-}
-
-li>a {
-    color: #000;
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    width: 100%;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-position: -10px 0;
-    background-repeat: no-repeat;
-    -webkit-background-size: 10px 100%;
-    -moz-background-size: 10px 100%;
-    -ms-background-size: 10px 100%;
-    -o-background-size: 10px 100%;
-    background-size: 10px 100%;
-}
-
-li>a * {
-    pointer-events: none;
-}
-
-li>a.tappable-active {
-    color: #fff;
-    background-color: #4286f5;
 }
 
 
@@ -397,4 +326,47 @@ li>a.tappable-active {
     position: absolute;
     z-index: 5;
 
+}
+
+.photoMain
+{
+    max-width: 400px;
+    max-height: 600px;
+
+    margin: 0 auto;
+    right: 0px;
+    left: 0px;
+
+    position: absolute;
+    z-index: 3;
+
+    left: 0px;
+    top: 0px;
+}
+
+.photoCanvas
+{
+    max-width: 350px;
+    max-height: 500px;
+
+    margin: 0 auto;
+    right: 0px;
+    left: 0px;
+
+    left: 0px;
+    top: 0px;
+}
+
+.input
+{
+    text-align: center;
+    font-size: 1.0em;
+    height: 100%;
+    width: 100%;
+    -webkit-user-select: text !important;
+    -khtml-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    -o-user-select: text !important;
+    user-select: text !important;
 }
