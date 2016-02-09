@@ -72,17 +72,28 @@ var app = {
         if (!hash) {
             if (this.homePage) {
                 this.slidePage(this.homePage);
+                console.log('existing home page');
             } else {
                 this.homePage = new HomeView(this.store).render();
                 this.slidePage(this.homePage);
+                console.log('new home page');
+
+
             }
-            return;
-        }
-        var match = hash.match(this.detailsURL);
-        if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
-                self.slidePage(new EmployeeView(employee).render());
+            $('#homeScreen').on('changeBack', function(event) {
+                if (self.changeBackScreen) {
+                    self.slidePage(self.changeBackScreen);
+                } else {
+                    self.changeBackScreen = new EmployeeView().render();
+                    self.slidePage(self.changeBackScreen);
+                }
+                $('#changeBackScreen').on("select", function (event, background) {
+                    self.homePage.greetingCardModel.background = background;
+                    self.homePage.updateScreen();
+                    self.route();
+                });
             });
+            return;
         }
     },
 

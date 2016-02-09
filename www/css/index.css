@@ -263,12 +263,29 @@ p {
 
 .playButton
 {
+    border-style: solid;
+    border-width: 19px 120px 23px 27px;
+    -moz-border-image: url(../img/PlayButton.png) 19 120 23 27 repeat;
+    -webkit-border-image: url(../img/PlayButton.png) 19 120 23 27 repeat;
+    -o-border-image: url(../img/PlayButton.png) 19 120 23 27 repeat;
+    border-image: url(../img/PlayButton.png) 19 120 23 27 fill repeat;
+    font-size: 1.8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+
+.changeUndercover
+{
     position: absolute;
     margin: 0 auto;
-    bottom: -100px;
-    right: 0px;
+    right: 400px;
     left: 0px;
-    z-index: 10;
+    top: 250px;
+    bottom: 250px;
+    z-index: -7;
 }
 
 
@@ -292,6 +309,16 @@ p {
 .readyContainer
 {
     margin-right: 40px;
+    margin-top: 110px;
+
+    max-width: 310px;
+}
+
+
+
+.playContainer
+{
+    margin-left: 40px;
     margin-top: 110px;
 }
 
@@ -325,6 +352,24 @@ p {
 
     position: absolute;
     z-index: 5;
+
+}
+
+.changeUndercoverLabel
+{
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+
+    left: 0px;
+    top: 250px;
+
+    font-size: 1.5em;
+    color: #000000;
+
+    position: absolute;
+    z-index: 8;
 
 }
 
@@ -369,4 +414,24 @@ p {
     -ms-user-select: text !important;
     -o-user-select: text !important;
     user-select: text !important;
+}
+
+.pagina{
+     width:auto;
+     height:auto;
+ }
+
+.linha{
+     width:auto;
+     padding:0px;
+     height:auto;
+     display:table;
+ }
+
+.tile{
+    height:200px;
+    width:200px;
+    float:left;
+    margin:0 0px 0 0;
+    padding:2px;
 }

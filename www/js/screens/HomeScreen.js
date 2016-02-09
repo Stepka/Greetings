@@ -9,7 +9,7 @@ var HomeView = function(store) {
 
     this.initialize = function() {
         // Define a div wrapper for the view. The div wrapper is used to attach events.
-        this.el = $('<div/>');
+        this.el = $('<div id="homeScreen"/>');
 
         var self = this;
         // Check of browser supports touch events...
@@ -40,7 +40,7 @@ var HomeView = function(store) {
                 alert("Готово");
             });
             $('body').on('touchend', '#changeBack', function(event) {
-                alert("Меняем фон");
+                $('#homeScreen').trigger('changeBack');
             });
             $('body').on('touchend', '#photoBevel', function(event) {
                 //$('#openUploadDialog').trigger('click');
@@ -85,7 +85,7 @@ var HomeView = function(store) {
                 alert("Готово");
             });
             $('body').on('mouseup', '#changeBack', function(event) {
-                alert("Меняем фон");
+                $('#homeScreen').trigger('changeBack');
             });
             $('body').on('mouseup', '#photoBevel', function(event) {
                 self.desktopBrowseImage();
@@ -101,8 +101,15 @@ var HomeView = function(store) {
 
 
 
+    this.updateScreen = function() {
+        $('body').css('background-image', this.greetingCardModel.background);
+        return this;
+    };
+
+
+
     this.render = function() {
-        $('body').css('background-image', 'url(' + this.greetingCardModel.background + ')');
+        this.updateScreen();
         this.el.html(HomeView.template());
 
         return this;

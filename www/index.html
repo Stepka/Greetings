@@ -46,6 +46,13 @@
                                 <textarea id="changeHeaderInput" class="input" style="display: none" >Сменить заголовок</textarea>
                             </div>
                         </div>
+                        <div id="changeUndercover" class="changeUndercover">
+                            <img id="changeUndercoverImg" class="changeUndercoverImg" src="img/ChangeBevelButton.png" height="350px">
+                            <div id="changeUndercoverLabel" class="changeUndercoverLabel">
+                                Сменить обложку
+                            </div>
+                        </div>
+
                         <div id="undercover" class="undercover" align="center">
                             <div id="photoBevel" class="photoBevel">
                                 <p id="getPhotoLabel" style="display: block">фото</p>
@@ -59,19 +66,59 @@
                                 <p id="changeGreetingTextLabel" style="display: block">текст поздравления</p>
                                 <textarea id="changeGreetingTextInput" class="input" style="display: none" >текст поздравления</textarea>
                             </div>
-                            <div id="playButton" class="playButton" >
-                                <img src="img/PlayButton.png" width="30%" height="30%">
-                            </div>
                         </div>
-                        <div class="readyContainer" align="right">
-                            <div id="readyButton" class="readyButton" align="center">
-                                готово
-                            </div>
-                        </div>
+                        <table width="100%" align="center">
+                            <tr width="100%">
+                                <td width="100%" align="right">
+                                    <div class="readyContainer" align="right">
+                                        <div id="playButton" class="playButton" align="center">
+                                            музыка
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="100%" align="center">
+                                    <div class="readyContainer" align="right">
+                                        <div id="readyButton" class="readyButton" align="center">
+                                            готово
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
             </table>
         </script>
+
+        <script id="backs-tpl" type="text/x-handlebars-template">
+            <div class="pagina">
+                <div class="linha">
+                    <div id="backTile1" class="tile" style="background-size: cover;">
+                    </div>
+                    <div id="backTile2" class="tile" style="background-size: cover;">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div id="backTile3" class="tile" style="background-size: cover;">
+                    </div>
+                    <div id="backTile4" class="tile" style="background-size: cover;">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div id="backTile5" class="tile" style="background-size: cover;">
+                    </div>
+                    <div id="backTile6" class="tile" style="background-size: cover;">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div id="backTile7" class="tile" style="background-size: cover;">
+                    </div>
+                    <div id="backTile8" class="tile" style="background-size: cover;">
+                    </div>
+                </div>
+            </div>
+        </script>
+
 
 
         <div id="app" class="app">
