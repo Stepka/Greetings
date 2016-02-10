@@ -177,6 +177,7 @@ var HomeView = function(store) {
         canvas.width = document.getElementById('photoBevel').offsetWidth;
         canvas.height = document.getElementById('photoBevel').offsetHeight;
         var ctx=canvas.getContext("2d");
+        alert("ctx = " + ctx);
 
 
         document.getElementById('getPhotoLabel').setAttribute('style', 'display:none;');
