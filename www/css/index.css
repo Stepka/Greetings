@@ -162,14 +162,15 @@ p {
     -o-border-image: url(../img/undercovers/Undercover_1.png) 47 45 47 44 stretch;
     border-image: url(../img/undercovers/Undercover_1.png) 47 45 47 44 fill stretch;
 
-    margin: 0 auto;
+    margin-left: 100px;
 
     top: 100px;
+
 
     min-height: 500px;
     min-width: 200px;
 
-    max-width: 70%;
+    max-width: 65%;
     max-height: 70%;
 
     position:relative;
@@ -280,9 +281,8 @@ p {
 .changeUndercover
 {
     position: absolute;
-    margin: 0 auto;
-    right: 400px;
-    left: 0px;
+    margin-left: -20px;
+    /*left: 10px;*/
     top: 250px;
     bottom: 250px;
     z-index: -7;
@@ -357,13 +357,13 @@ p {
 
 .changeUndercoverLabel
 {
-    transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-    -moz-transform:rotate(-90deg);
-    -o-transform:rotate(-90deg);
+    transform:rotate(-93deg);
+    -webkit-transform:rotate(-93deg);
+    -moz-transform:rotate(-93deg);
+    -o-transform:rotate(-93deg);
 
-    left: 0px;
-    top: 250px;
+    left: -20px;
+    top: 180px;
 
     font-size: 1.5em;
     color: #000000;
@@ -416,22 +416,33 @@ p {
     user-select: text !important;
 }
 
-.pagina{
+.pagina
+{
      width:auto;
      height:auto;
- }
+}
 
-.linha{
+.linha
+{
      width:auto;
      padding:0px;
      height:auto;
      display:table;
- }
+}
 
-.tile{
+.tile
+{
     height:200px;
     width:200px;
     float:left;
-    margin:0 0px 0 0;
-    padding:2px;
+    margin:0 5px 0 0;
+    padding: 5px;
+}
+
+.chooseBackTable
+{
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }

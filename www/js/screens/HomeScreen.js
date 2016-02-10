@@ -42,6 +42,9 @@ var HomeView = function(store) {
             $('body').on('touchend', '#changeBack', function(event) {
                 $('#homeScreen').trigger('changeBack');
             });
+            $('body').on('touchend', '#changeUndercover', function(event) {
+                $('#homeScreen').trigger('changeBack');
+            });
             $('body').on('touchend', '#photoBevel', function(event) {
                 //$('#openUploadDialog').trigger('click');
                 event.preventDefault();
@@ -85,6 +88,9 @@ var HomeView = function(store) {
                 alert("Готово");
             });
             $('body').on('mouseup', '#changeBack', function(event) {
+                $('#homeScreen').trigger('changeBack');
+            });
+            $('body').on('mouseup', '#changeUndercover', function(event) {
                 $('#homeScreen').trigger('changeBack');
             });
             $('body').on('mouseup', '#photoBevel', function(event) {
